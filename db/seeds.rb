@@ -9,17 +9,24 @@ User.destroy_all
 Deck.destroy_all 
 Card.destroy_all 
 
+# Users
+
 User.create(:username => 'dsound', :email => 'demiansims@gmail.com', :password => 'BaFlcc8083!')
 
+# Decks
 
-
-Deck.create(:name => 'Javascript: core concepts', :user_id => User.first.id)
+Deck.create(:name => 'Javascript', :user_id => User.first.id)
 Deck.create(:name => 'Ruby', :user_id => User.first.id)
-Deck.create(:name => 'Algos/Sort', :user_id => User.first.id)
+Deck.create(:name => 'Algorithms', :user_id => User.first.id)
 Deck.create(:name => 'HTML5/CSS3', :user_id => User.first.id)
+Deck.create!(:name => 'Data Structures', :user_id => User.first.id)
+ 
 
+# Cards
 
-Card.create(:front => 'Javascript', :back => "JavaScript (JS) is a lightweight interpreted or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. ", :deck_id => 1)
+# Javascript
+
+Card.create(:front => 'Javascript', :back => "JavaScript (JS) is a lightweight interpreted or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. ", :deck_id => 1) 
 Card.create(:front => 'Type Coercion', :back => "Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers). Type conversion is similar to type coercion because they both convert values from one data type to another with one key difference — type coercion is implicit whereas type conversion can be either implicit or explicit.", :deck_id => 1)
 Card.create(:front => 'Promises', :back => "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value. A Promise is in one of these states:
 
@@ -34,10 +41,14 @@ Card.create(:front => 'The Call Stack', :back => "A call stack is a mechanism fo
 Card.create(:front => 'This', :back => "A function's this keyword behaves a little differently in JavaScript compared to other languages. It also has some differences between strict mode and non-strict mode.
 
 In most cases, the value of this is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called. ES5 introduced the bind() method to set the value of a function's this regardless of how it's called, and ES2015 introduced arrow functions which don't provide their own this binding (it retains the this value of the enclosing lexical context).", :deck_id => 1)
+
+# Ruby
 Card.create(:front => 'Ruby', :back => "Ruby is an interpreted, high-level, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro 'Matz' Matsumoto in Japan. Ruby is dynamically typed and garbage-collected. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming.", :deck_id => 2)
 Card.create(:front => 'Class', :back => "A class is a blueprint from which objects are created. The object is also called as an instance of a class. For Example, the animal is a class and mammals, birds, fish, reptiles, and amphibians are the instances of the class. Similarly, the sales department is the class and the objects of the class are sales data, sales manager, and secretary.", :deck_id => 2)
 Card.create(:front => 'Method', :back => "A method in Ruby is a set of expressions that returns a value. With methods, one can organize their code into subroutines that can be easily invoked from other areas of their program.", :deck_id => 2)
 Card.create(:front => 'Ruby on Rails', :back => "Ruby on Rails, or Rails, is a server-side web application framework written in Ruby under the MIT License. Rails is a model–view–controller framework, providing default structures for a database, a web service, and web pages.", :deck_id => 2)
+
+# Algos
 Card.create(:front => 'Bubble Sort', :back => "function bubbleSortBasic(array) {
   for(var i = 0; i < array.length; i++) {
     for(var j = 1; j < array.length; j++) {
@@ -76,6 +87,8 @@ function merge(left, right) {
 Card.create(:front => 'Big O Notation', :back => "Big O notation is a mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity. It is a member of a family of notations invented by Paul Bachmann, Edmund Landau, and others, collectively called Bachmann–Landau notation or asymptotic notation.", :deck_id => 3)
 Card.create(:front => "O(log n)", :back => "Logarithmic: Finding an item in a sorted array with a binary search or a balanced search tree as well as all operations in a Binomial heap", :deck_id => 3)
 Card.create(:front => "O(n)", :back => "Linear: Finding an item in an unsorted list or in an unsorted array; adding two n-bit integers by ripple carry", :deck_id => 3)
+
+# HTML/CSS
 Card.create(:front => 'Div', :back => "The <div> tag defines a division or a section in an HTML document.
 The <div> element is often used as a container for other HTML elements to style them with CSS or to perform certain tasks with JavaScript.", :deck_id => 4)
 Card.create(:front => 'Span', :back => "The <span> tag is used to group inline-elements in a document.
@@ -88,7 +101,11 @@ Like tables, grid layout enables an author to align elements into columns and ro
 Card.create(:front => 'Padding', :back => "The padding CSS property sets the padding area on all four sides of an element. It is a shorthand for padding-top, padding-right, padding-bottom, and padding-left.", :deck_id => 4)
 Card.create(:front => 'Margin', :back => "The margin CSS property sets the margin area on all four sides of an element. It is a shorthand for margin-top, margin-right, margin-bottom, and margin-left.", :deck_id => 4)
 
-
+# Data Structures
+Card.create(:front => 'Stack', :back => 'Stack is a linear data structure which follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).', :deck_id => 5)
+Card.create(:front => 'Queue', :back => 'Queue is an abstract data structure, somewhat similar to Stacks. Unlike stacks, a queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Queue follows First-In-First-Out methodology, i.e., the data item stored first will be accessed first.', :deck_id => 5)
+Card.create(:front => 'Linked List', :back => 'A linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list', :deck_id => 5)
+Card.create(:front => 'Binary Tree', :back => 'a binary tree is a tree data structure in which each node has at most two children, which are referred to as the left child and the right child.', :deck_id => 5)
 
 
 # Card.create(:front => 'A Computer', :back => 'is a machine without intelligence and needs a Human Being to 
