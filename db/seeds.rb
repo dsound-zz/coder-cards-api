@@ -11,7 +11,6 @@ Card.destroy_all
 
 # Users
 
-User.create(:username => 'dsound', :email => 'demiansims@gmail.com', :password => 'BaFlcc8083!')
 
 # Decks
 
