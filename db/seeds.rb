@@ -14,11 +14,11 @@ Card.destroy_all
 
 # Decks
 
-Deck.create(:name => 'Javascript', :user_id => User.first.id)
-Deck.create(:name => 'Ruby', :user_id => User.first.id)
-Deck.create(:name => 'Algorithms', :user_id => User.first.id)
-Deck.create(:name => 'HTML5/CSS3', :user_id => User.first.id)
-Deck.create!(:name => 'Data Structures', :user_id => User.first.id)
+Deck.create(:name => 'Javascript', :user_id => User.find(2).id)
+Deck.create(:name => 'Ruby', :user_id => User.find(2).id)
+Deck.create(:name => 'Algorithms', :user_id => User.find(2).id)
+Deck.create(:name => 'HTML5/CSS3', :user_id => User.find(2).id)
+Deck.create!(:name => 'Data Structures', :user_id => User.find(2).id)
  
 
 # Cards
